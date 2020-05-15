@@ -33,7 +33,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %files
-%license add-license-file-here
+
+
+%license COPYING COPYING.LGPL
 %doc add-docs-here
 
 
