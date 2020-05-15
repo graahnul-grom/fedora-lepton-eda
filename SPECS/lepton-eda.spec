@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %license COPYING COPYING.LGPL
-%doc add-docs-here
+%doc README.md NEWS.md AUTHORS
 
 
 
