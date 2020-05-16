@@ -76,6 +76,7 @@ find %{buildroot} -type f -name '*.la' -delete -print
 %{_libdir}/libleptonrenderer.so.2.0.0
 %{_datadir}/lepton-eda/*
 %{_datadir}/icons/*
+%{_datadir}/applications/*.desktop
 %{_docdir}/lepton-eda/*
 %{_mandir}/man1/*
 
