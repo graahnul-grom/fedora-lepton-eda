@@ -48,7 +48,10 @@ It's in active development and well supported.
 
 %build
 ./autogen.sh
-%configure
+%configure \
+    --disable-rpath \
+    --disable-nls \
+    --disable-update-xdg-database
 %make_build
 
 
@@ -58,11 +61,21 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %files
-
-
 %license COPYING COPYING.LGPL
 %doc README.md NEWS.md AUTHORS
-
+%{_bindir}/*
+%{_includedir}/*
+%{_libdir}/pkgconfig/*.pc
+%{_libdir}/liblepton.so
+%{_libdir}/liblepton.so.5
+%{_libdir}/liblepton.so.5.0.0
+%{_libdir}/libleptonrenderer.so
+%{_libdir}/libleptonrenderer.so.2
+%{_libdir}/libleptonrenderer.so.2.0.0
+%{_datadir}/lepton-eda/*
+%{_datadir}/icons/*
+%{_docdir}/lepton-eda/*
+%{_mandir}/man1/*
 
 
 %changelog
