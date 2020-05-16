@@ -7,6 +7,8 @@ License: GPLv2+
 URL:     https://github.com/lepton-eda/lepton-eda
 Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200319/lepton-eda-1.9.10.tar.gz
 
+Patch0: 0-guile-snarf-m4-dmn.patch
+
 BuildRequires: guile22-devel
 BuildRequires: glib2-devel
 BuildRequires: gtk2-devel
@@ -38,10 +40,12 @@ of its active developers at that time.
 It's in active development and well supported.
 
 %prep
-%autosetup
+%setup -q
+%patch0 -p1
 
 
 %build
+./autogen.sh
 %configure
 %make_build
 
