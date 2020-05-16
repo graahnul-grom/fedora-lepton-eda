@@ -8,6 +8,7 @@ URL:     https://github.com/lepton-eda/lepton-eda
 Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200319/lepton-eda-1.9.10.tar.gz
 
 BuildRequires: guile22-devel
+BuildRequires: glib2-devel
 BuildRequires: gtk2-devel
 BuildRequires: gdk-pixbuf2-devel
 BuildRequires: cairo-devel
