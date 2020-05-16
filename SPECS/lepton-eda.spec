@@ -59,6 +59,8 @@ It's in active development and well supported.
 rm -rf $RPM_BUILD_ROOT
 %make_install
 
+find %{buildroot} -type f -name '*.la' -delete -print
+
 
 %files
 %license COPYING COPYING.LGPL
