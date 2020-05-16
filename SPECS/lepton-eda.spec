@@ -11,6 +11,7 @@ Patch0: 0-guile-snarf-m4-dmn.patch
 Patch1: 1-607.patch
 
 
+BuildRequires: gcc
 BuildRequires: guile22-devel
 BuildRequires: gettext-devel
 BuildRequires: intltool
@@ -18,13 +19,13 @@ BuildRequires: groff
 BuildRequires: flex
 BuildRequires: gawk
 BuildRequires: libtool
-BuildRequires: shared-mime-info
 BuildRequires: desktop-file-utils
 BuildRequires: pkgconfig(glib-2.0) >= 2.38.0
 BuildRequires: pkgconfig(gtk+-2.0) >= 2.24.0
 BuildRequires: pkgconfig(gdk-pixbuf-2.0) >= 2.21.0
 BuildRequires: pkgconfig(cairo)
 BuildRequires: pkgconfig(pango) >= 1.23.0
+BuildRequires: pkgconfig(shared-mime-info)
 
 Requires: guile22
 
