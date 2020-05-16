@@ -19,6 +19,8 @@ BuildRequires: groff
 BuildRequires: flex
 BuildRequires: gawk
 BuildRequires: libtool
+BuildRequires: autoconf
+BuildRequires: automake
 BuildRequires: desktop-file-utils
 BuildRequires: pkgconfig(glib-2.0) >= 2.38.0
 BuildRequires: pkgconfig(gtk+-2.0) >= 2.24.0
