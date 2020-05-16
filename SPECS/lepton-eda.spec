@@ -64,7 +64,7 @@ find %{buildroot} -type f -name '*.la' -delete -print
 
 %files
 %license COPYING COPYING.LGPL
-%doc AUTHORS
+%doc AUTHORS CONTRIBUTING.md
 %{_bindir}/*
 %{_includedir}/*
 %{_libdir}/pkgconfig/*.pc
