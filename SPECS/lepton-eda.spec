@@ -8,6 +8,7 @@ URL:     https://github.com/lepton-eda/lepton-eda
 Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200319/lepton-eda-1.9.10.tar.gz
 
 Patch0: 0-guile-snarf-m4-dmn.patch
+Patch1: 1-607.patch
 
 BuildRequires: guile22-devel
 BuildRequires: glib2-devel
@@ -42,6 +43,7 @@ It's in active development and well supported.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 
 %build
