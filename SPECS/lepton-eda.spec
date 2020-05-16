@@ -78,6 +78,7 @@ rm -rf %{buildroot}%{_infodir}/dir
 %{_datadir}/lepton-eda/*
 %{_datadir}/icons/*
 %{_datadir}/applications/*.desktop
+%{_datadir}/mime/packages/liblepton.xml
 %{_docdir}/lepton-eda/*
 %{_mandir}/man1/*
 %{_infodir}/*
