@@ -10,27 +10,24 @@ Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200
 Patch0: 0-guile-snarf-m4-dmn.patch
 Patch1: 1-607.patch
 
+
 BuildRequires: guile22-devel
-BuildRequires: glib2-devel
-BuildRequires: gtk2-devel
-BuildRequires: gdk-pixbuf2-devel
-BuildRequires: cairo-devel
-BuildRequires: libpng-devel
 BuildRequires: gettext-devel
 BuildRequires: intltool
 BuildRequires: groff
 BuildRequires: flex
 BuildRequires: gawk
 BuildRequires: libtool
-BuildRequires: pkgconf-pkg-config
 BuildRequires: shared-mime-info
 BuildRequires: desktop-file-utils
+BuildRequires: pkgconfig(glib-2.0) >= 2.38.0
+BuildRequires: pkgconfig(gtk+-2.0) >= 2.24.0
+BuildRequires: pkgconfig(gdk-pixbuf-2.0) >= 2.21.0
+BuildRequires: pkgconfig(cairo)
+BuildRequires: pkgconfig(pango) >= 1.23.0
 
 Requires: guile22
-Requires: gtk2
-Requires: gdk-pixbuf2
-Requires: cairo
-Requires: libpng
+
 
 %description
 Lepton EDA is a suite of free software tools for designing
