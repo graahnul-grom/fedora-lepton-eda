@@ -60,6 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %make_install
 
 find %{buildroot} -type f -name '*.la' -delete -print
+rm -rf %{buildroot}%{_infodir}/dir
 
 
 %files
@@ -79,6 +80,7 @@ find %{buildroot} -type f -name '*.la' -delete -print
 %{_datadir}/applications/*.desktop
 %{_docdir}/lepton-eda/*
 %{_mandir}/man1/*
+%{_infodir}/*
 
 
 %changelog
