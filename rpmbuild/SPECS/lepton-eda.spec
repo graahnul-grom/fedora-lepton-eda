@@ -84,12 +84,8 @@ rm -rf %{buildroot}%{_infodir}/dir
 %{_bindir}/*
 %{_includedir}/*
 %{_libdir}/pkgconfig/*.pc
-%{_libdir}/liblepton.so
-%{_libdir}/liblepton.so.5
-%{_libdir}/liblepton.so.5.0.0
-%{_libdir}/libleptonrenderer.so
-%{_libdir}/libleptonrenderer.so.2
-%{_libdir}/libleptonrenderer.so.2.0.0
+%{_libdir}/liblepton.*
+%{_libdir}/libleptonrenderer.*
 %{_datadir}/lepton-eda/*
 %{_datadir}/icons/*
 %{_datadir}/applications/*.desktop
