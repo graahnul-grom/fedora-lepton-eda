@@ -15,6 +15,13 @@ Patch1: fix-gcc-10-build.patch
 Patch2: fix-upcfg.patch
 # add lepton-upcfg man page: https://github.com/lepton-eda/lepton-eda/pull/620
 Patch3: add-upcfg-man-page.patch
+# fix font rendering with pango 1.44 patches: https://github.com/lepton-eda/lepton-eda/pull/<PR number>
+Patch4: fix-font-render-1-pr608.patch
+Patch5: fix-font-render-2-pr615.patch
+Patch6: fix-font-render-3-pr616.patch
+Patch7: fix-font-render-4-pr623.patch
+Patch8: fix-font-render-5-pr624.patch
+Patch9: fix-font-render-6-pr629.patch
 
 
 BuildRequires: gcc
@@ -52,6 +59,12 @@ It's in active development and well supported.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
+%patch7 -p1
+%patch8 -p1
+%patch9 -p1
 
 
 %build

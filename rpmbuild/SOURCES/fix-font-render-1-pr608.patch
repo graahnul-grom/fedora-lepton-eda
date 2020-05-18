@@ -1,0 +1,135 @@
+diff --git a/attrib/src/s_object.c b/attrib/src/s_object.c
+index db5990780..33f9e493d 100644
+--- a/attrib/src/s_object.c
++++ b/attrib/src/s_object.c
+@@ -84,7 +84,7 @@ s_object_add_comp_attrib_to_object (TOPLEVEL *toplevel,
+                                     gint show_name_value)
+ {
+   char *name_value_pair;
+-
++  g_return_if_fail (o_current != NULL);
+ 
+   /* One last sanity check, then add attrib */
+   if (strlen(new_attrib_value) != 0) {
+@@ -140,6 +140,7 @@ s_object_add_pin_attrib_to_object (TOPLEVEL *toplevel,
+                                    char *new_attrib_value)
+ {
+   char *name_value_pair;
++  g_return_if_fail (o_current != NULL);
+ 
+   /* One last sanity check */
+   if (strlen(new_attrib_value) != 0) {
+@@ -294,7 +295,7 @@ s_object_remove_attrib_in_object (TOPLEVEL *toplevel,
+  * \param text_string
+  * \param visibility
+  * \param show_name_value
+- * \param object
++ * \param o_current
+  * \returns pointer to the object
+  * \todo Does it need to return OBJECT?
+  */
+@@ -303,48 +304,33 @@ s_object_attrib_add_attrib_in_object (TOPLEVEL *toplevel,
+                                       char *text_string,
+                                       int visibility,
+                                       int show_name_value,
+-                                      OBJECT * object)
++                                      OBJECT * o_current)
+ {
+   int world_x = -1, world_y = -1;
+   int color;
+-  int left, right, top, bottom;
+-  OBJECT *o_current;
+   OBJECT *new_obj;
+ 
+-  o_current = object;
++  g_return_val_if_fail ((o_current != NULL), NULL);
+ 
+   /* creating a toplevel or unattached attribute */
+-  if (o_current) {
+-    /* get coordinates of where to place the text object */
+-    switch (o_current->type) {
+-    case (OBJ_COMPONENT):
+-      world_x = o_current->component->x;
+-      world_y = o_current->component->y;
+-      color = ATTRIBUTE_COLOR;
+-      break;
+-
+-    case (OBJ_NET):
+-      world_x = o_current->component->x;
+-      world_y = o_current->component->y;
+-      color = ATTRIBUTE_COLOR;
+-      break;
+-
+-    default:
+-      fprintf (stderr, "s_object_attrib_add_attrib_in_object: ");
+-      fprintf (stderr, _("Trying to add attrib to non-component or non-net!\n"));
+-      exit(-1);
+-    }
+-  } else {    /* This must be a floating attrib, but what is that !?!?!?!?!  */
+-    world_get_object_glist_bounds (toplevel,
+-                                   s_page_objects (toplevel->page_current),
+-                                   &left, &top, &right, &bottom);
+-
+-    /* this really is the lower left hand corner */
+-    world_x = left;
+-    world_y = top;
+-
+-    /* printf("%d %d\n", world_x, world_y); */
+-    color = DETACHED_ATTRIBUTE_COLOR;
++  /* get coordinates of where to place the text object */
++  switch (o_current->type) {
++  case (OBJ_COMPONENT):
++    world_x = o_current->component->x;
++    world_y = o_current->component->y;
++    color = ATTRIBUTE_COLOR;
++    break;
++
++  case (OBJ_NET):
++    world_x = o_current->component->x;
++    world_y = o_current->component->y;
++    color = ATTRIBUTE_COLOR;
++    break;
++
++  default:
++    fprintf (stderr, "s_object_attrib_add_attrib_in_object: ");
++    fprintf (stderr, _("Trying to add attrib to non-component or non-net!\n"));
++    exit(-1);
+   }
+ 
+   /* first create text item */
+@@ -371,11 +357,9 @@ s_object_attrib_add_attrib_in_object (TOPLEVEL *toplevel,
+ 
+   /* now toplevel->page_current->object_tail contains new text item */
+ 
+-  /* now attach the attribute to the object (if o_current is not NULL) */
++  /* now attach the attribute to the object */
+   /* remember that o_current contains the object to get the attribute */
+-  if (o_current) {
+-    o_attrib_attach (toplevel, new_obj, o_current, FALSE);
+-  }
++  o_attrib_attach (toplevel, new_obj, o_current, FALSE);
+ 
+   o_selection_add (toplevel,
+                    toplevel->page_current->selection_list, new_obj);
+diff --git a/attrib/src/s_toplevel.c b/attrib/src/s_toplevel.c
+index 6d046959f..cca48b06d 100644
+--- a/attrib/src/s_toplevel.c
++++ b/attrib/src/s_toplevel.c
+@@ -655,6 +655,8 @@ s_toplevel_update_component_attribs_in_toplevel (
+   gint visibility = 0;
+   gint show_name_value = 0;
+ 
++  g_return_if_fail (o_current != NULL);
++
+ #if DEBUG
+   printf ("==== Enter s_toplevel_update_component_attribs_in_toplevel()\n");
+ #endif
+@@ -989,6 +991,8 @@ s_toplevel_update_pin_attribs_in_toplevel (TOPLEVEL *toplevel,
+   char *new_attrib_value;
+   char *old_attrib_value;
+ 
++  g_return_if_fail (o_pin != NULL);
++
+ #if DEBUG
+   printf ("==== Enter s_toplevel_update_pin_attribs_in_toplevel()\n");
+ #endif
