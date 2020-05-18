@@ -7,9 +7,13 @@ License: GPLv2+
 URL:     https://github.com/lepton-eda/lepton-eda
 Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200319/lepton-eda-1.9.10.tar.gz
 
+# fix guile-snarf detection on Fedora:
 Patch0: 0-guile-snarf-m4-dmn.patch
+# fix build with gcc 10: https://github.com/lepton-eda/lepton-eda/pull/607
 Patch1: 1-607.patch
+# fix bug in lepton-upcfg: https://github.com/lepton-eda/lepton-eda/pull/609
 Patch2: 2-upcfg.patch
+# add lepton-upcfg man page: https://github.com/lepton-eda/lepton-eda/pull/620
 Patch3: 3-upcfg-man.patch
 
 
