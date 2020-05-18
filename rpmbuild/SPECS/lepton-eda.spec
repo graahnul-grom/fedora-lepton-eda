@@ -96,5 +96,5 @@ rm -rf %{buildroot}%{_infodir}/dir
 
 
 %changelog
-* Fri May 15 2020 dmn <graahnul.grom@gmail.com>
+* Fri May 15 2020 dmn <graahnul.grom@gmail.com> 1.9.10-1
 - Initial version of the package
