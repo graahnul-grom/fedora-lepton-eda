@@ -50,7 +50,6 @@ It's in active development and well supported.
 ./autogen.sh
 %configure \
     --disable-rpath \
-    --disable-nls \
     --disable-update-xdg-database
 %make_build
 
@@ -63,7 +62,15 @@ find %{buildroot} -type f -name '*.la' -delete -print
 rm -rf %{buildroot}%{_infodir}/dir
 
 
-%files
+%find_lang liblepton
+%find_lang lepton-schematic
+%find_lang lepton-attrib
+%find_lang lepton-cli
+%find_lang lepton-netlist
+%find_lang lepton-symcheck
+
+
+%files -f liblepton.lang -f lepton-schematic.lang -f lepton-attrib.lang -f lepton-cli.lang -f lepton-netlist.lang -f lepton-symcheck.lang
 %license COPYING COPYING.LGPL
 %doc AUTHORS CONTRIBUTING.md
 %{_bindir}/*
