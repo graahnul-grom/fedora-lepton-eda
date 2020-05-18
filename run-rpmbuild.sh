@@ -11,5 +11,10 @@ then
     fi
 fi
 
-rpmbuild -ba SPECS/lepton-eda.spec 2>&1 | tee rpmbuild-ba.log
+rpmbuild \
+    --define="%_topdir `pwd`" \
+    -ba \
+    --nodebuginfo \
+    SPECS/lepton-eda.spec \
+    2>&1 | tee rpmbuild-ba.log
 
