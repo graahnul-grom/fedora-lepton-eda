@@ -9,6 +9,8 @@ Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200
 
 Patch0: 0-guile-snarf-m4-dmn.patch
 Patch1: 1-607.patch
+Patch2: 2-upcfg.patch
+Patch3: 3-upcfg-man.patch
 
 
 BuildRequires: gcc
@@ -44,6 +46,8 @@ It's in active development and well supported.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 
 %build
