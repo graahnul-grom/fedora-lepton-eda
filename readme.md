@@ -19,6 +19,6 @@ Build source and binary RPM packages:
 $ ./run-rpmbuild.sh
 ```
 
-Install the binary package just built from the RPPM/
-directory by running `sudo dnf localinstall <package>`.
+Install the binary package just built from the RPMS/
+directory by running `sudo dnf localinstall`.
 
