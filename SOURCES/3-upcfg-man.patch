@@ -1,12 +1,3 @@
-diff --git a/utils/docs/.gitignore b/utils/docs/.gitignore
-index 3a90347f8..2d770725d 100644
---- a/utils/docs/.gitignore
-+++ b/utils/docs/.gitignore
-@@ -14,3 +14,4 @@ lepton-sch2pcb.html
- lepton-schdiff.html
- lepton-symfix.html
- lepton-tragesym.html
-+lepton-upcfg.html
 diff --git a/utils/docs/Makefile.am b/utils/docs/Makefile.am
 index 46ecdf7bf..97fdd7e2f 100644
 --- a/utils/docs/Makefile.am
