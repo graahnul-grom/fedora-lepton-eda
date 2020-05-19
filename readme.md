@@ -5,19 +5,12 @@ build and install Lepton EDA RPM package on Fedora Linux.
 
 Tested on Fedora 32 x86_64.
 
-<!--
-
-This repository contains the `SPEC` file, patches, and scripts
-to build the Lepton EDA RPM package for Fedora Linux.
-
- quickly and easily
-
-This repository contains the `SPEC` file and patches
-to build the Lepton EDA RPM package for Fedora Linux.
--->
-
-
 #### How to build and install
+
+Install required packages:
+```
+$ sudo dnf install git-core wget rpm-build
+```
 
 Clone the repository:
 ```
