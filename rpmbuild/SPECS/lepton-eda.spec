@@ -29,6 +29,7 @@ BuildRequires: guile22-devel
 BuildRequires: gettext-devel
 BuildRequires: intltool
 BuildRequires: groff
+BuildRequires: texinfo
 BuildRequires: flex
 BuildRequires: gawk
 BuildRequires: libtool
