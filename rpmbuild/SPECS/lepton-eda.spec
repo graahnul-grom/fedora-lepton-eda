@@ -36,6 +36,7 @@ BuildRequires: libtool
 BuildRequires: autoconf
 BuildRequires: automake
 BuildRequires: desktop-file-utils
+BuildRequires: libstroke-devel
 BuildRequires: pkgconfig(glib-2.0) >= 2.38.0
 BuildRequires: pkgconfig(gtk+-2.0) >= 2.24.0
 BuildRequires: pkgconfig(gdk-pixbuf-2.0) >= 2.21.0
@@ -44,6 +45,7 @@ BuildRequires: pkgconfig(pango) >= 1.23.0
 BuildRequires: pkgconfig(shared-mime-info)
 
 Requires: guile22
+Requires: libstroke
 
 
 %description
