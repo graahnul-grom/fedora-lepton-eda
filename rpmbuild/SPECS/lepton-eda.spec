@@ -7,7 +7,7 @@ License: GPLv2+
 URL:     https://github.com/lepton-eda/lepton-eda
 Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200319/lepton-eda-1.9.10.tar.gz
 
-# fix guile-snarf detection on Fedora:
+# fix guile-snarf detection on Fedora
 Patch0: detect-guile-snarf.patch
 # fix build with gcc 10: https://github.com/lepton-eda/lepton-eda/pull/607
 Patch1: fix-gcc-10-build.patch
@@ -22,6 +22,8 @@ Patch6: fix-font-render-3-pr616.patch
 Patch7: fix-font-render-4-pr623.patch
 Patch8: fix-font-render-5-pr624.patch
 Patch9: fix-font-render-6-pr629.patch
+# fix memory leaks: https://github.com/lepton-eda/lepton-eda/pull/647
+Patch10: fix-memleak-pr647.diff
 
 
 BuildRequires: gcc
@@ -68,6 +70,7 @@ It's in active development and well supported.
 %patch7 -p1
 %patch8 -p1
 %patch9 -p1
+%patch10 -p1
 
 
 %build
