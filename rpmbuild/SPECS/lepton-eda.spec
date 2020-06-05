@@ -66,13 +66,13 @@ rm -rf %{buildroot}%{_infodir}/dir
 
 %find_lang liblepton
 %find_lang lepton-schematic
-%find_lang lepton-attrib
+%find_lang libleptonattrib
 %find_lang lepton-cli
 %find_lang lepton-netlist
 %find_lang lepton-symcheck
 
 
-%files -f liblepton.lang -f lepton-schematic.lang -f lepton-attrib.lang -f lepton-cli.lang -f lepton-netlist.lang -f lepton-symcheck.lang
+%files -f liblepton.lang -f lepton-schematic.lang -f libleptonattrib.lang -f lepton-cli.lang -f lepton-netlist.lang -f lepton-symcheck.lang
 %license COPYING COPYING.LGPL
 %doc AUTHORS CONTRIBUTING.md
 %{_bindir}/*
