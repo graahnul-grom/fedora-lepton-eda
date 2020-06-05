@@ -2,8 +2,8 @@
 
 This repository contains everything necessary to
 build and install Lepton EDA RPM package on Fedora Linux.<br />
-Current version: [1.9.10 release](https://github.com/lepton-eda/lepton-eda/releases/tag/1.9.10-20200319),
-plus several upstream patches.<br />
+Current version: [1.9.11 release](https://github.com/lepton-eda/lepton-eda/releases/tag/1.9.11-20200604).
+<br />
 Tested on Fedora 32 x86_64.<br />
 
 #### How to build and install
@@ -41,7 +41,7 @@ $ ./run-rpmbuild.sh
 
 Install the binary package just built from the `RPMS/` sub-directory:
 ```
-$ sudo dnf localinstall RPMS/x86_64/lepton-eda-1.9.10-1.fc32.x86_64.rpm
+$ sudo dnf localinstall RPMS/x86_64/lepton-eda-1.9.11-1.fc32.x86_64.rpm
 ```
 `x86_64` folder and `rpm` file may have different names,
 depending on machine architecture and Fedora version.
