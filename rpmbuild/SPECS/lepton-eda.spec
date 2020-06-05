@@ -1,29 +1,14 @@
 Name:           lepton-eda
-Version:        1.9.10
+Version:        1.9.11
 Release:        1%{?dist}
 Summary:        Lepton Electronic Design Automation
 
 License: GPLv2+
 URL:     https://github.com/lepton-eda/lepton-eda
-Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.10-20200319/lepton-eda-1.9.10.tar.gz
+Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.11-20200604/lepton-eda-1.9.11.tar.gz
 
 # fix guile-snarf detection on Fedora
 Patch0: detect-guile-snarf.patch
-# fix build with gcc 10: https://github.com/lepton-eda/lepton-eda/pull/607
-Patch1: fix-gcc-10-build.patch
-# fix bug in lepton-upcfg utility: https://github.com/lepton-eda/lepton-eda/pull/609
-Patch2: fix-upcfg.patch
-# add lepton-upcfg man page: https://github.com/lepton-eda/lepton-eda/pull/620
-Patch3: add-upcfg-man-page.patch
-# fix font rendering with pango 1.44 patches: https://github.com/lepton-eda/lepton-eda/pull/<PR number>
-Patch4: fix-font-render-1-pr608.patch
-Patch5: fix-font-render-2-pr615.patch
-Patch6: fix-font-render-3-pr616.patch
-Patch7: fix-font-render-4-pr623.patch
-Patch8: fix-font-render-5-pr624.patch
-Patch9: fix-font-render-6-pr629.patch
-# fix memory leaks: https://github.com/lepton-eda/lepton-eda/pull/647
-Patch10: fix-memleak-pr647.diff
 
 
 BuildRequires: gcc
@@ -61,16 +46,6 @@ It's in active development and well supported.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
-%patch7 -p1
-%patch8 -p1
-%patch9 -p1
-%patch10 -p1
 
 
 %build
@@ -115,5 +90,7 @@ rm -rf %{buildroot}%{_infodir}/dir
 
 
 %changelog
+* Fri Jun 05 2020 dmn <graahnul.grom@gmail.com> 1.9.11-1
+- Update to release 1.9.11
 * Fri May 15 2020 dmn <graahnul.grom@gmail.com> 1.9.10-1
 - Initial version of the package
