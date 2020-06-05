@@ -80,6 +80,7 @@ rm -rf %{buildroot}%{_infodir}/dir
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/liblepton.*
 %{_libdir}/libleptonrenderer.*
+%{_libdir}/libleptonattrib.*
 %{_datadir}/lepton-eda/*
 %{_datadir}/icons/*
 %{_datadir}/applications/*.desktop
