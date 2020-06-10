@@ -3,9 +3,18 @@
 This repository contains everything necessary to easily build and install
 <br />
 [Lepton EDA](https://github.com/lepton-eda/lepton-eda) RPM package on Fedora Linux.<br />
+<br />
 Current version: [1.9.11 release](https://github.com/lepton-eda/lepton-eda/releases/tag/1.9.11-20200604).
 <br />
-Tested on Fedora 32 x86_64.<br />
+Tested on: Fedora 32 x86_64.<br />
+
+[Lepton EDA](https://github.com/lepton-eda/lepton-eda)
+is a suite of free software tools for designing electronics,
+an actively developed fork of the
+[gEDA/gaf suite](http://wiki.geda-project.org/geda:gaf),
+started in late 2016 by most of gEDA/gaf developers at that time.
+<br />
+<br />
 
 #### How to build and install
 
@@ -24,7 +33,7 @@ Go to the build directory:
 $ cd fedora-lepton-eda/rpmbuild/
 ```
 
-Download the source tarball. This script will download the latest
+Download the source tarball: this script will download the latest
 version of Lepton EDA source code tarball to the `SOURCES/` sub-directory:
 ```
 $ ./download-source.sh
