@@ -51,6 +51,7 @@ It's in active development and well supported.
 %build
 ./autogen.sh
 %configure \
+    --disable-attrib \
     --disable-rpath \
     --disable-update-xdg-database
 %make_build
@@ -66,18 +67,16 @@ rm -rf %{buildroot}%{_infodir}/dir
 
 %find_lang liblepton
 %find_lang lepton-schematic
-%find_lang libleptonattrib
 %find_lang lepton-cli
 
 
-%files -f liblepton.lang -f lepton-schematic.lang -f libleptonattrib.lang -f lepton-cli.lang
+%files -f liblepton.lang -f lepton-schematic.lang -f lepton-cli.lang
 %license COPYING COPYING.LGPL
 %doc AUTHORS CONTRIBUTING.md
 %{_bindir}/*
 %{_includedir}/*
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/liblepton.*
-%{_libdir}/libleptonattrib.*
 %{_datadir}/lepton-eda/*
 %{_datadir}/icons/*
 %{_datadir}/applications/*.desktop
