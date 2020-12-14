@@ -1,27 +1,5 @@
-diff --git a/m4/geda-guile.m4 b/m4/geda-guile.m4
-index b5443a0ed..843b2e874 100644
---- a/m4/geda-guile.m4
-+++ b/m4/geda-guile.m4
-@@ -59,17 +59,6 @@ AC_DEFUN([AX_CHECK_GUILE],
-   GUILE_PKG([2.2 2.0])
- 
- 
--  # Check for the `guile-snarf' build tool
--  # --------------------------------------
--  AC_ARG_VAR([GUILE_SNARF], [path to guile-snarf utility])
--
--  AC_CHECK_PROG([GUILE_SNARF], [guile-snarf], [guile-snarf], [no])
--  if test "x$GUILE_SNARF" = xno ; then
--    AC_MSG_ERROR([The `guile-snarf' tool could not be found. Please ensure that the
--Guile development headers and tools are correctly installed, and rerun
--configure.])
--  fi
--
-   # Check for behaviour of `scm_display_error'
-   # ------------------------------------------
-   if test "X$GUILE" != "Xno"; then
 diff --git a/m4/guile.m4 b/m4/guile.m4
-index 89823e9c3..36d34e18f 100644
+index 696897364..4bc59bf7c 100644
 --- a/m4/guile.m4
 +++ b/m4/guile.m4
 @@ -1,6 +1,7 @@
@@ -32,24 +10,17 @@ index 89823e9c3..36d34e18f 100644
  ##
  ## This library is free software; you can redistribute it and/or
  ## modify it under the terms of the GNU Lesser General Public License
-@@ -211,6 +212,8 @@ AC_DEFUN([GUILE_SITE_DIR],
- #
- # Usage: GUILE_PROGS([VERSION])
- #
-+# Lepton EDA: added code to search for guile-snarf executable.
-+#
- # This macro looks for programs @code{guile} and @code{guild}, setting
- # variables @var{GUILE} and @var{GUILD} to their paths, respectively.
- # The macro will attempt to find @code{guile} with the suffix of
-@@ -298,6 +301,13 @@ AC_DEFUN([GUILE_PROGS],
+@@ -301,6 +302,15 @@ AC_DEFUN([GUILE_PROGS],
    AC_PATH_PROG(GUILD,[guild$_guile_suffix])
    AC_SUBST(GUILD)
  
 +
-+  # Lepton EDA: guile-snarf executable:
++  # Lepton EDA: detect guile-snarf executable on Fedora 32,
++  #             it is named "guile-snarf2.2" there:
 +  #
 +  AC_PATH_PROG(GUILE_SNARF,[guile-snarf$_guile_suffix])
 +  AC_SUBST(GUILE_SNARF)
++
 +
 +
    AC_PATH_PROG(GUILE_CONFIG,[guile-config$_guile_suffix])
