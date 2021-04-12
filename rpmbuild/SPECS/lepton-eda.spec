@@ -1,11 +1,11 @@
 Name:           lepton-eda
-Version:        1.9.13
+Version:        1.9.14
 Release:        1%{?dist}
 Summary:        Lepton Electronic Design Automation
 
 License: GPLv2+
 URL:     https://github.com/lepton-eda/lepton-eda
-Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.13-20201211/lepton-eda-1.9.13.tar.gz
+Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.14-20210407/lepton-eda-1.9.14.tar.gz
 
 # fix guile-snarf detection on Fedora
 Patch0: detect-guile-snarf.patch
