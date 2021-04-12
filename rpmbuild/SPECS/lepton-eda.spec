@@ -88,6 +88,8 @@ rm -rf %{buildroot}%{_infodir}/dir
 
 
 %changelog
+* Mon Apr 12 2021 dmn <graahnul.grom@gmail.com> 1.9.14-1
+- Update to release 1.9.14
 * Mon Dec 14 2020 dmn <graahnul.grom@gmail.com> 1.9.13-1
 - Update to release 1.9.13
 * Fri Jun 05 2020 dmn <graahnul.grom@gmail.com> 1.9.11-1
