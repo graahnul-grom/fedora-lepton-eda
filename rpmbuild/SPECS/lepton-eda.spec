@@ -41,6 +41,8 @@ electronics. It provides schematic capture, netlisting into
 over 30 netlist formats, and many other features.
 It was forked from the gEDA/gaf suite in late 2016 by most
 of its active developers at that time.
+Lepton EDA is backward compatible with its predecessor and
+supports the same file format for symbols and schematics.
 It's in active development and well supported.
 
 %prep
