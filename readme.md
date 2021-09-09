@@ -6,12 +6,12 @@ This repository contains everything necessary to easily build and install
 [Lepton EDA](https://github.com/lepton-eda/lepton-eda) RPM package on Fedora Linux.
 <br />
 <br />
-Current version: [1.9.15 release](https://github.com/lepton-eda/lepton-eda/releases/tag/1.9.15-20210626).
+Current version: [1.9.16 release](https://github.com/lepton-eda/lepton-eda/releases/tag/1.9.16-20210731).
 <br />
 Tested on: Fedora 32 x86_64.
 <br />
 <br />
-**Note:** RPM packages for Lepton EDA 1.9.13, 1.9.14 and 1.9.15 don't include `lepton-attrib`,
+**Note:** Starting with Lepton EDA 1.9.13, RPM packages don't include `lepton-attrib`,
 the batch attribute editor. It depends on the [gtkextra library](http://gtkextra.sourceforge.net),
 version 3.0.0 or higher, but this [package in Fedora](https://src.fedoraproject.org/rpms/gtk+extra)
 is extremely outdated (2.1.2, from 2010).
@@ -62,7 +62,7 @@ $ ./run-rpmbuild.sh
 
 Install the binary package just built from the `RPMS/` sub-directory:
 ```
-$ sudo dnf localinstall RPMS/x86_64/lepton-eda-1.9.15-1.fc32.x86_64.rpm
+$ sudo dnf localinstall RPMS/x86_64/lepton-eda-1.9.16-1.fc32.x86_64.rpm
 ```
 `x86_64` folder and `rpm` file may have different names,
 depending on machine architecture and Fedora version.
