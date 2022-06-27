@@ -8,7 +8,7 @@ This repository contains everything necessary to easily build and install
 <br />
 Current version: [1.9.17 release](https://github.com/lepton-eda/lepton-eda/releases/tag/1.9.17-20211219).
 <br />
-Tested on: Fedora 32 x86_64.
+Tested on: Fedora 32 x86_64, Fedora 33 x86_64.
 <br />
 <br />
 **Note:** Starting with Lepton EDA 1.9.13, RPM packages don't include `lepton-attrib`,
