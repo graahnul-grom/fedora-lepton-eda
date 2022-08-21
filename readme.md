@@ -6,6 +6,11 @@ This repository contains everything necessary to easily build and install
 [Lepton EDA](https://github.com/lepton-eda/lepton-eda) RPM package on Fedora Linux.
 <br />
 <br />
+News: the work is underway to upgrade RPM package to the latest
+lepton-eda version (1.9.18) and make it work on Fedora 36.
+Stay tuned.
+<br />
+<br />
 Current version: [1.9.17 release](https://github.com/lepton-eda/lepton-eda/releases/tag/1.9.17-20211219).
 <br />
 Tested on: Fedora 32 x86_64, Fedora 33 x86_64.
