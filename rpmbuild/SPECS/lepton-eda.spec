@@ -7,9 +7,6 @@ License: GPLv2+
 URL:     https://github.com/lepton-eda/lepton-eda
 Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.17-20211219/lepton-eda-1.9.17.tar.gz
 
-# fix guile-snarf detection on Fedora
-Patch0: detect-guile-snarf.patch
-
 
 BuildRequires: gcc
 BuildRequires: guile22-devel
@@ -47,7 +44,6 @@ It's in active development and well supported.
 
 %prep
 %setup -q
-%patch0 -p1
 
 
 %build
