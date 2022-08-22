@@ -1,5 +1,5 @@
 Name:           lepton-eda
-Version:        1.9.17
+Version:        1.9.18
 Release:        1%{?dist}
 Summary:        Lepton Electronic Design Automation
 
@@ -90,6 +90,8 @@ rm -rf %{buildroot}%{_infodir}/dir
 
 
 %changelog
+* Mon Aug 22 2022 dmn <graahnul.grom@gmail.com> 1.9.18-1
+- Update to release 1.9.18
 * Wed Dec 29 2021 dmn <graahnul.grom@gmail.com> 1.9.17-1
 - Update to release 1.9.17
 * Thu Sep 09 2021 dmn <graahnul.grom@gmail.com> 1.9.16-1
