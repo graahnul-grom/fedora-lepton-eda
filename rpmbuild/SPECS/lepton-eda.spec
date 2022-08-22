@@ -51,7 +51,8 @@ It's in active development and well supported.
 %configure \
     --disable-attrib \
     --disable-rpath \
-    --disable-update-xdg-database
+    --disable-update-xdg-database \
+    --enable-guild
 %make_build
 
 
