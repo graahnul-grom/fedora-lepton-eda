@@ -5,7 +5,7 @@ Summary:        Lepton Electronic Design Automation
 
 License: GPLv2+
 URL:     https://github.com/lepton-eda/lepton-eda
-Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.17-20211219/lepton-eda-1.9.17.tar.gz
+Source0: https://github.com/lepton-eda/lepton-eda/releases/download/1.9.18-20220529/lepton-eda-1.9.18.tar.gz
 
 
 BuildRequires: gcc
